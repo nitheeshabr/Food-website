@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swatch-Yog Cloud Kitchen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="bg-dark text-white text-center p-3">
+        <div class="container">
+            <img src="C:\Users\rishitta\Desktop\Ratna\images.png" alt="Cloud Kitchen Logo" class="img-fluid mb-2" style="max-width: 150px;">
+            <h1>SWATCH-YOG CLOUD KITCHEN</h1>
+            <p>Contact: +91-8688449369</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Flavorful Bites -->
+            <div class="col-md-6">
+                <h2 class="text-warning">Flavorful Bites</h2>
+                <ul class="list-group">
+                    <li class="list-group-item order-btn" data-category="Flavorful Bites">Garelu</li>
+                    <li class="list-group-item order-btn" data-category="Flavorful Bites">Sakinalu</li>
+                    <li class="list-group-item order-btn" data-category="Flavorful Bites">Kaarapoosa</li>
+                    <li class="list-group-item order-btn" data-category="Flavorful Bites">Bhoondhi Mixture</li>
+                    <li class="list-group-item order-btn" data-category="Flavorful Bites">Murukulu</li>
+                </ul>
+            </div>
+
+            <!-- Sweets -->
+            <div class="col-md-6">
+                <h2 class="text-warning">Sweets</h2>
+                <ul class="list-group">
+                    <li class="list-group-item order-btn" data-category="Sweets">Bhoondhi Laddu</li>
+                    <li class="list-group-item order-btn" data-category="Sweets">Sunnundalu</li>
+                    <li class="list-group-item order-btn" data-category="Sweets">Dryfruit Laddu</li>
+                    <li class="list-group-item order-btn" data-category="Sweets">Nuvvula Laddu</li>
+                    <li class="list-group-item order-btn" data-category="Sweets">Pallila Laddu</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <!-- Pickles -->
+            <div class="col-md-6">
+                <h2 class="text-warning">Pickles</h2>
+                <ul class="list-group">
+                    <li class="list-group-item order-btn" data-category="Pickles">Tomato Pickle</li>
+                    <li class="list-group-item order-btn" data-category="Pickles">Mango Pickle</li>
+                    <li class="list-group-item order-btn" data-category="Pickles">Amla Pickle</li>
+                    <li class="list-group-item order-btn" data-category="Pickles">Lemon Pickle</li>
+                    <li class="list-group-item order-btn" data-category="Pickles">Chintakay Pickle</li>
+                    <li class="list-group-item order-btn" data-category="Pickles">Chicken Pickle</li>
+                    <li class="list-group-item order-btn" data-category="Pickles">Mutton Pickle</li>
+                    <li class="list-group-item order-btn" data-category="Pickles">Prawn Pickle</li>
+                    <li class="list-group-item order-btn" data-category="Pickles">Fish (Koramenu) Pickle</li>
+                </ul>
+            </div>
+
+            <!-- Catering -->
+            <div class="col-md-6">
+                <h2 class="text-warning">Catering</h2>
+                <ul class="list-group">
+                    <li class="list-group-item order-btn" data-category="Catering">Veg Meals</li>
+                    <li class="list-group-item order-btn" data-category="Catering">Non-Veg Meals</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign-In Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signInForm">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Place Your Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <div class="mb-3">
+                            <label for="orderItem" class="form-label">Order Item</label>
+                            <input type="text" class="form-control" id="orderItem" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea class="form-control" id="address" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
